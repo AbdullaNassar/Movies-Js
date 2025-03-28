@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="movieStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo"><img src="/assets/Logo.png" alt="" /></div>
+      <div>
+        <ul class="navigation">
+          <li><a href="">Home</a></li>
+          <li><a class="selectedNav" href="">Movies&Shows</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Supscriptions</a></li>
+        </ul>
+      </div>
+
+      <div class="icon">
+        <a href=""
+          ><img
+            S
+            width="30px"
+            height="30px"
+            src="/assets/search-interface-symbol.png"
+            alt=""
+        /></a>
+        <a href=""
+          ><img width="30px" height="30px" src="/assets/user.png" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero_img">
+        <img id="imagePoster" src="/assets/filmimage.jpg" alt="" />
+      </div>
+      <div class="hero_text">
+        <a target="_blank" id="movieTitle">Kantara</a>
+        <!-- <p id="overview">
+          A fiery young man with an unfunching forest officer in a south indian
+          village where spirtually. fate and folklore rule the lands.
+        </p> -->
+      </div>
+      <div class="hero_btns">
+        <ul>
+          <li>
+            <a href=""><img src="/assets/Button.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/assets/Button1.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/assets/Button2.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/assets/Button3.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="left">
+        <div class="description">
+          <h4>Description</h4>
+          <p id="overview">
+            A fiery youmg man clashes with an unfinching forest officier in a
+            south indian village where spirtuality, fate and floklore rule the
+            lands.
+          </p>
+        </div>
+        <div class="cast">
+          <div>
+            <h3>Cast</h3>
+          </div>
+          <div class="cast_img">
+            <img src="/assets/p1.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p2.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p3.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p4.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p5.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p6.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p7.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p8.png" width="80px" height="70px" alt="" />
+            <img src="/assets/p9.png" width="80px" height="70px" alt="" />
+          </div>
+        </div>
+        <div class="reviews">
+          <div>
+            <h3>Reviews</h3>
+          </div>
+          <div class="reviewContainer">
+            <div class="review_box">
+              <div class="review_header">
+                <div>
+                  <h4>Ankit Roy</h4>
+                  <span class="india">From India</span>
+                </div>
+                <div class="rating_box">
+                  <span>⭐⭐⭐⭐</span>
+                  <span class="rating">4</span>
+                </div>
+              </div>
+              <div class="review_text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatem voluptatum a ratione hic architecto magni maxime
+                  ipsum praesentium at sapiente enim perspiciatis fuga soluta
+                  nam, quam omnis impedit accusantium? Voluptas maxime id
+                  adipisci beatae soluta quae repellendus porro atque est?
+                </p>
+              </div>
+            </div>
+            <div class="review_box">
+              <div class="review_header">
+                <div>
+                  <h4>Ankit Roy</h4>
+                  <span class="india">From India</span>
+                </div>
+                <div class="rating_box">
+                  <span>⭐⭐⭐⭐⭐</span>
+                  <span class="rating">5</span>
+                </div>
+              </div>
+              <div class="review_text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatem voluptatum a ratione hic architecto magni maxime
+                  ipsum praesentium at sapiente enim perspiciatis fuga soluta
+                  nam, quam omnis impedit accusantium? Voluptas maxime id
+                  adipisci beatae soluta quae repellendus porro atque est?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="released">
+          <span class="heading_right"> Released Year</span>
+          <span id="releasedDate">2022</span>
+        </div>
+
+        <div class="language">
+          <span id="languageHeading" class="heading_right">Languages</span>
+          <!-- <div class="languages_box">
+            <span class="language_item">ُEnglish</span>
+            <span class="language_item">Hingi</span>
+            <span class="language_item">Arabic</span>
+          </div> -->
+        </div>
+
+        <div class="ratings">
+          <span class="heading_right">Ratings</span>
+          <div class="ratings_container">
+            <div class="rating_item">
+              <div>
+                <span id="ratingStar"></span>
+                <span id="ratingValue">5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="genres">
+          <span id="genresHeading" class="heading_right">Genres</span>
+          <!-- <div>
+            <span class="genres_item">Action</span>
+            <span class="genres_item">Adventure</span>
+          </div> -->
+        </div>
+
+        <div class="production">
+          <span class="heading_right">Production Companies</span>
+          <div class="productionConitainer" id="productionConitainer">
+            <!-- <div class="productionItem">
+              <img src="/assets/p1.png" width="50px" height="50px" alt="" />
+              <span>abx</span>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="director">
+          <span class="heading_right">Director</span>
+          <div class="director_container">
+            <img src="/assets/imgcast.jfif" height="40px" width="40px" alt="" />
+            <div class="director_info">
+              <span>Rishab Shetty</span>
+              <span class="director_country">From india</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="movie.js"></script>
+  </body>
+</html>
