@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./files/icon.png" type="image/x-icon">
+    <title>StreamVibe</title>
+</head>
+
+<body>
+
+    <header class="header" >
+        <div id="imglo">
+             <img  src="./files/Logo.png" alt="">
+        </div>
+        <nav class="navbar">
+
+            <a class="signup" id="signup" onclick="singup()">Sign Up</a>
+        </nav>
+    </header>
+    
+    <div id="big"></div>
+   
+    <div class="login-container">
+        <form id="loginForm" action="./home.html" target="_blank">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="input-group remember-me">
+                <input type="checkbox" id="rememberMe" onchange="remmeber()">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <button type="submit">Login</button>
+            <p id="error-message" class="error-message"></p><br><br><br><br>
+            <p id="con">Continue with </p>
+            <br>
+            <a class="facegoogle" id="facebookLogin"><img class="img" src="./files/face.jpg.png" alt="facebook"></a>
+
+            <a class="facegoogle" id="googleLogin"><img class="img" src="./files/gmail.png" alt="facebook"></a>
+        </form>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
