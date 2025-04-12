@@ -1,5 +1,5 @@
 "usestrict";
-
+console.log(localStorage.getItem("favorites"));
 // API Call
 var res;
 var params = new URLSearchParams(window.location.search);
