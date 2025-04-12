@@ -14,15 +14,15 @@ document
     // getting the data from locale storage
     const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
-
+location.assign("../HomePage/index.html");
     // Simulated login validation
-    if (email === storedEmail && password === storedPassword) {
+    // if (email === storedEmail && password === storedPassword) {
 
-        location.assign("../HomePage/index.html")
+        
 
-    } else {//
-        errorMessage.textContent = "Invalid username or password!";
-    }
+    // } else {//
+    //     errorMessage.textContent = "Invalid username or password!";
+    // }
   });
 
 

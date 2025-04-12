@@ -27,7 +27,12 @@ function Display() {
                     <h2>${
                       allposts[i].title ? allposts[i].title : allposts[i].name
                     }</h2>
-                    <button class="butt" onclick="getid(${allposts[i].id})>Show Details</button> <br>
+                    <button class="butt" onclick="getid(${
+                      allposts[i].id
+                    })">Show Details</button> 
+                    <br>
+                    <span id='star' onclick="fav(this)">★</span>
+                    <br>
                     <span>Vote: ${allposts[i].vote_average}</span>
                 </div>
             </div>    
@@ -43,11 +48,10 @@ setTimeout(() => {
   this.document.body.style.cssText = `
     overflow: auto ;
     `;
-document.getElementById("linkid").style.cssText = `
+  document.getElementById("linkid").style.cssText = `
     background-color: red;
     `;
 }, 1000);
-
 
 const toggleIcon = document.getElementById("toggleIcon");
 const body = document.body;
@@ -56,7 +60,6 @@ toggleIcon.addEventListener("click", () => {
   body.classList.toggle("light");
   toggleIcon.textContent = body.classList.contains("light") ? "☀️" : "🌙"; // Change icon
 });
-
 
 let ups = document.getElementById("up");
 window.addEventListener("scroll", function () {
@@ -75,6 +78,12 @@ window.addEventListener("scroll", function () {
 ups.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+function fav(star) {
+  star.style.cssText = `
+  color:yellow;
+  `;
+}
 
 function getid(id) {
   window.location = `./datails.html?id=${id}`;
