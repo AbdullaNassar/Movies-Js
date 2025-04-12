@@ -6,40 +6,34 @@ document
     event.preventDefault();
     // declare the user and password vars
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
-
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
 
     // getting the data from locale storage
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
-location.assign("../HomePage/index.html");
+    const storedEmail = localStorage.getItem("email");
+    const storedPassword = localStorage.getItem("password");
+
     // Simulated login validation
-    // if (email === storedEmail && password === storedPassword) {
-
-        
-
-    // } else {//
-    //     errorMessage.textContent = "Invalid username or password!";
-    // }
+    if (email === storedEmail && password === storedPassword) {
+      location.assign("../HomePage/index.html");
+    } else {
+      //
+      errorMessage.textContent = "Invalid username or password!";
+    }
   });
 
-
-document.getElementById('signup').addEventListener('click', function () {
-    location.assign("../signUp/signUp.html")
+document.getElementById("signup").addEventListener("click", function () {
+  location.assign("../signUp/signUp.html");
 });
 //  remember me functionality
 // Load Email from local storage if it exists
 function remmeber() {
-
-    const savedUser = localStorage.getItem('email');
-    if (document.getElementById('rememberMe').checked == true) {
-        document.getElementById('email').value = savedUser;
-
-    }
-};
-
+  const savedUser = localStorage.getItem("email");
+  if (document.getElementById("rememberMe").checked == true) {
+    document.getElementById("email").value = savedUser;
+  }
+}
 
 // // create random opacity
 // var myEvent = new Event("opacity");
@@ -55,9 +49,8 @@ function remmeber() {
 
 // login with facebook
 
-document.getElementById('facebookLogin').addEventListener('click', function () {
-    location.assign("./home.html")
-
+document.getElementById("facebookLogin").addEventListener("click", function () {
+  location.assign("./home.html");
 });
 //  login with google
 document.getElementById("googleLogin").addEventListener("click", function () {

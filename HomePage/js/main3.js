@@ -86,5 +86,5 @@ function fav(star) {
 }
 
 function getid(id) {
-  window.location = `./datails.html?id=${id}`;
+  window.location = `../movieDetails/movieDetails.html?id=${id}`;
 }
