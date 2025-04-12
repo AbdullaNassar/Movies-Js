@@ -34,7 +34,9 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     }
 
     if (username && password && emailInput) {
-        localStorage.setItem('username', username);
+        let [fname,lname] = username.split(" ");
+        localStorage.setItem('fname', fname);
+        localStorage.setItem('lname', lname);
         localStorage.setItem('password', password);
         localStorage.setItem('email', emailInput.value);
     }

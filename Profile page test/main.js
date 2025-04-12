@@ -18,35 +18,35 @@ let month = months[date.getMonth()];
 localStorage.setItem("Joined_Date", month + " " + date.getFullYear());
 
 //Api Requst
-let moviesData = new XMLHttpRequest;
-moviesData.open("GET","https://api.themoviedb.org/3/trending/all/week?api_key=eb2ea9d1a56bfee6c00b801429fd0d16");
-moviesData.onreadystatechange = () => {
-  if(moviesData.readyState == 4 && moviesData.status == 200) {
-    let moviesDataRes = moviesData.response;
-    let moviesDataResObj = JSON.parse(moviesDataRes);
+// let moviesData = new XMLHttpRequest;
+// moviesData.open("GET","https://api.themoviedb.org/3/trending/all/week?api_key=eb2ea9d1a56bfee6c00b801429fd0d16");
+// moviesData.onreadystatechange = () => {
+//   if(moviesData.readyState == 4 && moviesData.status == 200) {
+//     let moviesDataRes = moviesData.response;
+//     let moviesDataResObj = JSON.parse(moviesDataRes);
 
-    //movie ID
-    let moveieId = JSON.parse(localStorage.getItem("favorites_id"));
+//     //movie ID
+//     let moveieId = JSON.parse(localStorage.getItem("favorites_id"));
 
-    //check if the favorites array is empty or not
-    if(moveieId.length != 0) {
-      let favoriteArray =[];
-      for (const favMovie of moveieId) {
-        for (const element of moviesDataResObj.results) {
-          if(favMovie == element.id) {
-            favoriteArray.push({
-              id:element.id,
-              name: (element.name || element.title),
-              src:element.poster_path,
-            });
-          }
-        }
-      }
-      localStorage.setItem("favorites",JSON.stringify(favoriteArray));
-    }
-  }
-}
-moviesData.send();
+//     //check if the favorites array is empty or not
+//     if(moveieId.length != 0) {
+//       let favoriteArray =[];
+//       for (const favMovie of moveieId) {
+//         for (const element of moviesDataResObj.results) {
+//           if(favMovie == element.id) {
+//             favoriteArray.push({
+//               id:element.id,
+//               name: (element.name || element.title),
+//               src:element.poster_path,
+//             });
+//           }
+//         }
+//       }
+//       localStorage.setItem("favorites",JSON.stringify(favoriteArray));
+//     }
+//   }
+// }
+// moviesData.send();
 
 // get full name , Joined Date and photo from localstorage
 let photo = document.getElementById("profile-img");
@@ -97,9 +97,9 @@ function displayFromLocalStorage(localStorageKey,htmlBox) {
   if (listObj != null && listObj.length != 0) {
     htmlBox.classList.add("grid");
     for (const element of listObj) {
-      let video = `<div class="video">
+      let video = `<div class="video" onclick="MoveTo(${element.id})">
             <a href="#">
-                <img src="https://image.tmdb.org/t/p/w500/${element.src}" >
+                <img src="${element.src}" >
                 <span>${element.name}</span>
             </a>
         </div>`;
@@ -124,7 +124,7 @@ let favoriteslistTrash = document.getElementById("favoriteslist-trash");
 
 function clearList(localStorageKey) {
   localStorage.setItem(localStorageKey,JSON.stringify([]));
-  localStorage.setItem("favorites_id",JSON.stringify([]));
+  // localStorage.setItem("favorites_id",JSON.stringify([]));
   if(localStorageKey=="favorites"){
     favoritelistCounter.innerHTML = "0";
     favoriteCounterHead.innerHTML = "0";
@@ -147,3 +147,6 @@ favoriteslistTrash.addEventListener("click", () => {
 
 
 
+function MoveTo(id){
+  window.location = `../movieDetails/movieDetails.html?id=${id}`;
+}
