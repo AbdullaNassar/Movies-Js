@@ -25,17 +25,17 @@
 
   ## 👨‍💻 Contributors
       <a target="_blank" href="https://github.com/AbdullaNassar"
-      >Abdullah Moemen</a
-    >
+      >Abdullah Moemen</a>
+    
     <a target="_blank" href="https://github.com/sherifshoukryalqwatly"
-      >Sherif Shoukry</a
-    >
+      >Sherif Shoukry</a>
+    
     <a target="_blank" href="https://github.com/mostafasayed0">
-      Mostafa Sayed</a
-    >
+      Mostafa Sayed</a>
+    
     <a target="_blank" href="https://github.com/MahmoudFathyTawfeek"
-      >Mahmoud Fathy</a
-    >
+      >Mahmoud Fathy</a>
+    
     <a target="_blank" href="https://github.com/RAaDY-7">Ahmed Rady</a>
 
 ## 🔗 **Live Demo**: <a href="https://streamvibees.netlify.app/">StreamVibe<a/>
