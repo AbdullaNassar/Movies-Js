@@ -27,7 +27,7 @@ body {
     display: flex;
     margin-top: 0;
     /* background-color: #271010; */
-    background-image: url(./files/icon.PNG);
+    background-image: url(./files/one.jpg);
     background-size: cover;
     opacity: .5;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 header .navbar .signup {
-    margin: 5px 50px 5px 1100px;
+    margin: 5px 50px 5px 1160px;
     padding: 5px;
     font-size: 1.1rem;
     font-weight: initial;
@@ -60,8 +60,8 @@ header .navbar .signup {
 }
 
 header .navbar .signup:hover {
-    color: #000;
-    background-color: blue;
+    color: blue;
+
 }
 
 .login-container {
@@ -135,26 +135,27 @@ button:hover {
 #rememberMe {
     position: fixed;
     top: 305px;
-    left: 200px;
+    left: 220px;
 
 }
 
 .facegoogle {
     width: 60%;
     height: 30%;
-    margin: 10px;
+    margin-left: 50px;
     text-decoration: none;
     color: #333;
 
 }
 
 .facegoogle:hover {
-    opacity: .3;
+    opacity: .2;
 }
 
 #con {
     color: #fff;
     font-size: small;
+    margin-left: 20px;
 }
 
 
@@ -203,5 +204,24 @@ button:hover {
     animation: mymove2 8s infinite;
 }
 
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #fff;
+    position: fixed;
+    top: 86%;
+    left: 69%;
 
+}
+
+footer a {
+    color: #0066c0;
+    text-decoration: none;
+    margin: 0 10px ;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 	

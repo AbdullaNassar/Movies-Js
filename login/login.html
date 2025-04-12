@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <link rel="icon" href="./files/icon.png" type="image/x-icon">
-    <title>StreamVibe</title>
+    <title>StreamVibe_Login</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         </div>
         <nav class="navbar">
 
-            <a class="signup" id="signup" onclick="singup()">Sign Up</a>
+            <a class="signup" id="signup" onclick="singUp()">Sign Up</a>
         </nav>
     </header>
     
@@ -27,8 +27,8 @@
         <form id="loginForm" action="./home.html" target="_blank">
             <h2>Login</h2>
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -39,14 +39,22 @@
                 <label for="rememberMe">Remember Me</label>
             </div>
             <button type="submit">Login</button>
-            <p id="error-message" class="error-message"></p><br><br><br><br>
+            <p id="error-message" class="error-message"></p><br>
             <p id="con">Continue with </p>
-            <br>
+           
             <a class="facegoogle" id="facebookLogin"><img class="img" src="./files/face.jpg.png" alt="facebook"></a>
 
             <a class="facegoogle" id="googleLogin"><img class="img" src="./files/gmail.png" alt="facebook"></a>
         </form>
-
+        <footer>
+            <div class="container">
+                <a class="using" href="../signUp/terms.html">Conditions of Use</a><br>
+                <a class="help" href="mailto:StreamVibe_cs@gmail.com">Help</a>
+                
+                
+                <p class="cape">© 2025 by StreamVibe team.</p>
+            </div>
+        </footer>
     </div>
 
     <script src="login.js"></script>

@@ -4,32 +4,36 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     // Prevent form submission
     event.preventDefault();
     // declare the user and password vars
-    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
 
 
     // getting the data from locale storage
-    const storedUsername = localStorage.getItem('username');
+    const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
 
     // Simulated login validation
-    if (username === storedUsername && password === storedPassword) {
+    if (email === storedEmail && password === storedPassword) {
 
-        location.assign("home.html")
+        location.assign("../HomePage/index.html")
 
-    } else {
+    } else {//
         errorMessage.textContent = "Invalid username or password!";
 
     }
 });
 
+
+document.getElementById('signup').addEventListener('click', function () {
+    location.assign("../signUp/signUp.html")
+});
 //  remember me functionality
-// Load username from local storage if it exists
+// Load Email from local storage if it exists
 function remmeber() {
-    const savedUser = localStorage.getItem('username');
+    const savedUser = localStorage.getItem('email');
     if (document.getElementById('rememberMe').checked == true) {
-        document.getElementById('username').value = savedUser;
+        document.getElementById('email').value = savedUser;
 
     }
 };
@@ -51,7 +55,7 @@ function remmeber() {
 
 // login with facebook
 document.getElementById('facebookLogin').addEventListener('click', function () {
-    location.assign("home.html")
+    location.assign("./home.html")
 });
 //  login with google
 document.getElementById('googleLogin').addEventListener('click', function () {
