@@ -27,9 +27,7 @@ function Display() {
                     <h2>${
                       allposts[i].title ? allposts[i].title : allposts[i].name
                     }</h2>
-                    <button class="butt" onclick="getid(${
-                      allposts[i].id
-                    })">Show Details</button> 
+                    <button class="butt" onclick="getid(${allposts[i].id})">Show Details</button> 
                     <br>
                     <span id='star' onclick="fav(this)">★</span>
                     <br>
@@ -69,7 +67,7 @@ window.addEventListener("scroll", function () {
             display: block;
             `;
   } else {
-    ups.style.cssText = `
+    ups.style.cssText=`
             display: none;
             `;
   }
@@ -79,12 +77,12 @@ ups.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-function fav(star) {
-  star.style.cssText = `
-  color:red;
+function fav(star){
+  star.style.cssText=`
+  color:yellow;
   `;
 }
 
 function getid(id) {
-  window.location = `../../movieDetails/movieDetails.html?id=${id}`;
+  window.location = `./datails.html?id=${id}`;
 }
