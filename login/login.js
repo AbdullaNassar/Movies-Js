@@ -1,9 +1,11 @@
-
 // Login functionality
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
     // Prevent form submission
     event.preventDefault();
     // declare the user and password vars
+
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
@@ -20,9 +22,8 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     } else {//
         errorMessage.textContent = "Invalid username or password!";
-
     }
-});
+  });
 
 
 document.getElementById('signup').addEventListener('click', function () {
@@ -31,12 +32,14 @@ document.getElementById('signup').addEventListener('click', function () {
 //  remember me functionality
 // Load Email from local storage if it exists
 function remmeber() {
+
     const savedUser = localStorage.getItem('email');
     if (document.getElementById('rememberMe').checked == true) {
         document.getElementById('email').value = savedUser;
 
     }
 };
+
 
 // // create random opacity
 // var myEvent = new Event("opacity");
@@ -50,16 +53,15 @@ function remmeber() {
 //     document.getElementById("imglo").dispatchEvent(myEvent);
 // }, 1000);
 
-
-
-
 // login with facebook
+
 document.getElementById('facebookLogin').addEventListener('click', function () {
     location.assign("./home.html")
+
 });
 //  login with google
-document.getElementById('googleLogin').addEventListener('click', function () {
-    location.assign("home.html")
+document.getElementById("googleLogin").addEventListener("click", function () {
+  location.assign("home.html");
 });
 
 ///

@@ -76,7 +76,22 @@ ul li a:hover {
 .icon img {
   filter: invert(1);
 }
+#heart {
+  font-size: 70px;
+}
 
+#heart:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.heartColor {
+  color: red;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
 .hero {
   display: flex;
   justify-content: center;
@@ -124,6 +139,7 @@ ul li a:hover {
   list-style: none;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 .hero_btns li:hover {
   transform: scale(1.1);
@@ -372,3 +388,76 @@ ul li a:hover {
   align-items: center;
   gap: 10px;
 }
+
+/* Start Footer section  */
+.footer {
+  padding: 30px 0;
+  background-color: #1f1f1f;
+}
+.footer .lists {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .lists .title {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+}
+.footer .lists ul li {
+  padding: 15px;
+}
+.footer .lists ul li a {
+  color: #949dab;
+  font-size: 17px;
+  transition: 0.3s;
+}
+.footer .lists ul li a:hover {
+  color: red;
+}
+.footer .contact-with-us .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer .contact-with-us .icons i {
+  padding: 20px;
+  color: #fff;
+  background-color: #343940;
+  cursor: pointer;
+  /* border-radius: 12px; */
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .contact-with-us .icons i:hover {
+  background-color: red;
+  color: #fff;
+}
+.footer .copy-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding-top: 20px;
+  border-top: 2px solid #fff;
+}
+.footer .copy-right p {
+  font-size: 20px;
+}
+.footer .copy-right ul {
+  display: flex;
+}
+.footer .copy-right ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .copy-right ul li:hover {
+  color: red;
+}
+/* End Footer section  */

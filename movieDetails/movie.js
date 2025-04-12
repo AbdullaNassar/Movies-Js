@@ -3,9 +3,15 @@
 // API Call
 let res;
 
-let url =
-  "https://api.themoviedb.org/3/movie/858485?api_key=e18ad800950cc61dbaa56a2fad2a2666";
-// "https://api.themoviedb.org/3/movie/550?api_key=e18ad800950cc61dbaa56a2fad2a2666";
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+console.log(id);
+var url = `https://api.themoviedb.org/3/movie/${id}?api_key=e18ad800950cc61dbaa56a2fad2a2666`;
+
+// let url =
+//   // "https://api.themoviedb.org/3/movie/858485?api_key=e18ad800950cc61dbaa56a2fad2a2666";
+//   "https://api.themoviedb.org/3/movie/550?api_key=e18ad800950cc61dbaa56a2fad2a2666";
 
 let xhr = new XMLHttpRequest();
 xhr.open("GET", url, false);
@@ -28,6 +34,14 @@ var movieTitle = document.getElementById("movieTitle");
 var overview = document.getElementById("overview");
 var ratingStar = document.getElementById("ratingStar");
 var ratingValue = document.getElementById("ratingValue");
+var logo = document.getElementById("logo");
+var heart = document.getElementById("heart");
+
+console.log(logo);
+logo.addEventListener("click", function () {
+  console.log(logo);
+  window.location = "../HomePage/index.html";
+});
 
 imagePoster.src = `https://image.tmdb.org/t/p/w500/${res.poster_path}`;
 releasedDate.innerText = res.release_date.substring(0, 4);
@@ -93,3 +107,34 @@ for (let i = 0; i < res.production_companies.length; i++) {
     .getElementById("productionConitainer")
     .insertAdjacentElement("beforeend", productionItem);
 }
+
+let favsMovies = JSON.parse(localStorage.getItem("favorites"));
+console.log(favsMovies);
+var curFav = favsMovies.filter((movie) => movie.id == res.id);
+console.log(curFav);
+if (curFav.length) heart.classList.add("heartColor");
+function heartClick() {
+  let listObj = JSON.parse(localStorage.getItem("favorites"));
+  if (heart.classList.contains("heartColor")) {
+    listObj = listObj.filter((item) => item.id !== res.id);
+    console.log(listObj);
+    heart.classList.remove("heartColor");
+    localStorage.setItem("favorites", JSON.stringify(listObj));
+  } else {
+    var obj = {
+      id: res.id,
+      name: res.title,
+      src: `https://image.tmdb.org/t/p/w500/${res.poster_path}`,
+    };
+
+    listObj.push(obj);
+    console.log(listObj);
+    localStorage.setItem("favorites", JSON.stringify(listObj));
+    heart.classList.add("heartColor");
+  }
+
+  // favs.push(obj);
+  // console.log(localStorage.getItem("favorites"));
+}
+
+heart.addEventListener("click", heartClick);
