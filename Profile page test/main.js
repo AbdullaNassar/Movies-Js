@@ -1,3 +1,4 @@
+localStorage.setItem("photo",'Photo.jpg');
 //Joined Date
 const months = [
   "January",
