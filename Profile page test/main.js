@@ -1,4 +1,4 @@
-localStorage.setItem("photo",'Photo.jpg');
+// localStorage.getItem("photo") ? "" : localStorage.setItem("photo", "photo.jpg");
 //Joined Date
 const months = [
   "January",
@@ -78,7 +78,7 @@ let favoriteCounterHead = document.getElementById("favorites-head");
 function counterFun(localStorageKey) {
   let listObj = JSON.parse(localStorage.getItem(localStorageKey));
   return listObj.length;
-};
+}
 
 if (JSON.parse(localStorage.getItem("watchlist")) != null) {
   watchlistCounter.innerHTML = counterFun("watchlist");
@@ -93,7 +93,7 @@ if (JSON.parse(localStorage.getItem("favorites")) != null) {
 let watchlistVideos = document.getElementById("watchlist-videos");
 let favoritelistVideos = document.getElementById("favoritelist-videos");
 
-function displayFromLocalStorage(localStorageKey,htmlBox) {
+function displayFromLocalStorage(localStorageKey, htmlBox) {
   let listObj = JSON.parse(localStorage.getItem(localStorageKey));
   if (listObj != null && listObj.length != 0) {
     htmlBox.classList.add("grid");
@@ -104,7 +104,7 @@ function displayFromLocalStorage(localStorageKey,htmlBox) {
                 <span>${element.name}</span>
             </a>
         </div>`;
-        htmlBox.innerHTML += video;
+      htmlBox.innerHTML += video;
     }
   } else {
     htmlBox.classList.remove("grid");
@@ -122,19 +122,17 @@ displayFromLocalStorage("favorites", favoritelistVideos);
 let watchlistTrash = document.getElementById("watchlist-trash");
 let favoriteslistTrash = document.getElementById("favoriteslist-trash");
 
-
 function clearList(localStorageKey) {
-  localStorage.setItem(localStorageKey,JSON.stringify([]));
+  localStorage.setItem(localStorageKey, JSON.stringify([]));
   // localStorage.setItem("favorites_id",JSON.stringify([]));
-  if(localStorageKey=="favorites"){
+  if (localStorageKey == "favorites") {
     favoritelistCounter.innerHTML = "0";
     favoriteCounterHead.innerHTML = "0";
-    displayFromLocalStorage('favorites',favoritelistVideos);
-
-  }else {
+    displayFromLocalStorage("favorites", favoritelistVideos);
+  } else {
     watchlistCounterHead.innerHTML = "0";
     watchlistCounter.innerHTML = "0";
-    displayFromLocalStorage("watchlist",watchlistVideos);
+    displayFromLocalStorage("watchlist", watchlistVideos);
   }
 }
 
@@ -146,8 +144,6 @@ favoriteslistTrash.addEventListener("click", () => {
   clearList("favorites");
 });
 
-
-
-function MoveTo(id){
+function MoveTo(id) {
   window.location = `../movieDetails/movieDetails.html?id=${id}`;
 }
