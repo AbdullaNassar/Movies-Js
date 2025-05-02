@@ -103,10 +103,12 @@ for (var i = 0; i < res.production_companies.length; i++) {
 function addToFav() {
   var listObj = JSON.parse(localStorage.getItem("favorites"));
   if (heart.classList.contains("heartColor")) {
+    //remove movie from favlist
     listObj = listObj.filter((item) => item.id !== res.id);
     heart.classList.remove("heartColor");
     localStorage.setItem("favorites", JSON.stringify(listObj));
   } else {
+    // add movie to favlist
     var obj = {
       id: res.id,
       name: res.title,
